@@ -3,12 +3,17 @@ import 'react-circular-progressbar/dist/styles.css'
 import { PauseButton } from "./PauseButton";
 import PlayButton from "./PlayButton";
 import { SettingsButton } from "./SettingsButton";
+import { useContext } from "react";
+import SettingsContext from "./SettingsContext"
 
 const red = '#f54e4e'
 const green = '#4aec8c'
 
 
+
 export default function Timer() {
+
+  const settingsInfo = useContext(SettingsContext)
     
   return (
     <div>
@@ -28,7 +33,7 @@ export default function Timer() {
             <PauseButton/> 
         </div>
         <div>
-          <SettingsButton/>
+          <SettingsButton onClick={() => settingsInfo.setShowSettings(true) } />
         </div>
 
     </div>
