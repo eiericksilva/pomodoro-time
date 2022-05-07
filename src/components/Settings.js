@@ -34,7 +34,6 @@ export default function Settings(props) {
         />
         <div style={{ textAlign:'center', marginTop:'20px' }}>
           <BackButton onClick={ () => console.log(settingsInfo.setShowSettings(false)) }/>
-          {/* settingsInfo.setShowSettings(false) */}
         </div>
 
 

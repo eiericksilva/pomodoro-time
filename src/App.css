@@ -21,6 +21,8 @@ button {
   display: inline-block;
   width: 100px;
   cursor: pointer;
+  fill: #eee;
+  padding-bottom: 15px;
 }
 button.with-text {
   width: auto;
@@ -35,7 +37,6 @@ button.with-text svg {
   width: 36px;
   float: left;
   margin-right: 5px;
-  
 }
 
 label {
