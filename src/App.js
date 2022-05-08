@@ -16,16 +16,15 @@ function App() {
        <SettingsContext.Provider value={{
          showSettings,
          setShowSettings,
+
          workMinutes,
-         breakMinutes,
          setWorkMinutes,
+
+         breakMinutes,
          setBreakMinutes,
        }}>
         {showSettings ? <Settings/> : <Timer/>}
        </SettingsContext.Provider>
-
-
-
     </main>
   );
 }

@@ -30,7 +30,7 @@ export default function Settings(props) {
           value={settingsInfo.breakMinutes}
           onChange={newValue => settingsInfo.setBreakMinutes(newValue)}
           min={1}
-          max={120}
+          max={60}
         />
         <div style={{ textAlign:'center', marginTop:'20px' }}>
           <BackButton onClick={ () => console.log(settingsInfo.setShowSettings(false)) }/>

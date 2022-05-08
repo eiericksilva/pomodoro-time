@@ -50,7 +50,7 @@ export default function Timer() {
       }
 
       tick();
-    },100);
+    },1000);
 
     return () => clearInterval(interval);
   }, [settingsInfo]);
@@ -67,13 +67,16 @@ export default function Timer() {
   return (
     <div>
       <CircularProgressbar
+      
         value={percentage}
         text={minutes + ':' + seconds}
+        counterClockwise={true}
         styles={buildStyles({
-        textColor:'#fff',
-        pathColor:mode === 'work' ? red : green,
-        tailColor:'rgba(255,255,255,.2)',
-      })} />
+          textColor:'#fff',
+          pathColor:mode === 'work' ? red : green,
+          tailColor:'rgba(255,255,255,.2)',
+        })} 
+      />
       <div style={{marginTop:'20px'}}>
         {isPaused
           ? <PlayButton onClick={() => { setIsPaused(false); isPausedRef.current = false; }} />
