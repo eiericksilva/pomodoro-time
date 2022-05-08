@@ -16,9 +16,9 @@ export default function Timer() {
   const [mode, setMode] = useState('work'); // work/break/null
   const [secondsLeft, setSecondsLeft] = useState(0);
 
-  const secondsLeftRef = useRef(secondsLeft);
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
+  const secondsLeftRef = useRef(secondsLeft);
 
   function tick() {
     secondsLeftRef.current--;
